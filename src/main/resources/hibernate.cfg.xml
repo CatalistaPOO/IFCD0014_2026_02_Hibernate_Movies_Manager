@@ -20,7 +20,7 @@
         <property name="hibernate.hbm2ddl.auto">update</property>
         <!-- List of mapped classes -->
         <!--<mapping class="com.cursogetafe.Ave"/>-->
-        <mapping class="com.cursospring.moviesmanager.model.Interprete"/>
+        <mapping class="com.cursospring.moviesmanager.model.Genero"/>
         <mapping class="com.cursospring.moviesmanager.model.Pelicula"/>
     </session-factory>
 </hibernate-configuration>

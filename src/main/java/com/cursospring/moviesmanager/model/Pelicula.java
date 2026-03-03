@@ -15,25 +15,35 @@ public class Pelicula {
     private String director;
     @Column(name="year")
     private int anyo;
-    @OneToMany
-    private List<Interprete> reparto;
+    @ManyToOne
+    @JoinColumn(name = "idGenero")
+    private Genero genero;
+
 
     public Pelicula() {
     }
 
-    public Pelicula(String titulo, String director, int anyo, List<Interprete> reparto) {
+    public Pelicula(String titulo, String director, int anyo, Genero genero) {
         this.titulo = titulo;
         this.director = director;
         this.anyo = anyo;
-        this.reparto = reparto;
+        this.genero = genero;
     }
 
-    public Pelicula(int id, String titulo, String director, int anyo, List<Interprete> reparto) {
+    public Pelicula(int id, String titulo, String director, int anyo, Genero genero) {
         this.id = id;
         this.titulo = titulo;
         this.director = director;
         this.anyo = anyo;
-        this.reparto = reparto;
+        this.genero = genero;
+    }
+
+    public Genero getGenero() {
+        return genero;
+    }
+
+    public void setGenero(Genero genero) {
+        this.genero = genero;
     }
 
     public int getId() {
@@ -68,11 +78,8 @@ public class Pelicula {
         this.anyo = anyo;
     }
 
-    public List<Interprete> getReparto() {
-        return reparto;
-    }
 
-    public void setReparto(List<Interprete> reparto) {
-        this.reparto = reparto;
-    }
+
+
+
 }
