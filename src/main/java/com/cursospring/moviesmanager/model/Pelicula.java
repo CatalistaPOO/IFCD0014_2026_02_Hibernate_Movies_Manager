@@ -6,6 +6,7 @@ import java.util.List;
 
 @Entity
 @Table(name="t_movie")
+@NamedQuery(name = "Pelicula.findByTittle",query="FROM Pelicula p WHERE LOWER(p.titulo) LIKE :cadena")
 public class Pelicula {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -29,13 +29,17 @@ public class App {
 //
 //        GeneroDAO.finishSession();
 
-        PeliculaDAO.startSession();
-        searchBeforeYear(2000).forEach(System.out::println);
-        PeliculaDAO.finishSession();
+//        PeliculaDAO.startSession();
+//        searchBeforeYear(2000).forEach(System.out::println);
+//        PeliculaDAO.finishSession();
+//
+//        GeneroDAO.startSession();
+//        searchWithGenero("t").forEach(System.out::println);
+//        GeneroDAO.finishSession();
 
-        GeneroDAO.startSession();
-        searchWithGenero("t").forEach(System.out::println);
-        GeneroDAO.finishSession();
+        PeliculaDAO.startSession();
+        searchWithTitle("pel").forEach(System.out::println);
+        PeliculaDAO.finishSession();
     }
     private static void createGenero(Genero genero) {
         GeneroDAO.create(genero);
